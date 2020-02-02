@@ -72,7 +72,7 @@ const patients = [
     }
 ];
 
-mongoose.connect("mongodb://localhost/asthma");
+mongoose.connect("mongodb://localhost/asthma", { useNewUrlParser: true });
 
 patients.map(data => {
     const patient = new Patient(data);
